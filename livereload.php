@@ -3,7 +3,7 @@
 Plugin Name: LiveReload Snippet
 Plugin URI: http://wordpress.org/extend/plugins/livereload
 Description: Add the LiveReload javascript snippet to the footer of your theme.
-Version: 1.1
+Version: 2.0
 Author: Barry Ceelen
 Author URI: https://github.com/functionsfile
 
