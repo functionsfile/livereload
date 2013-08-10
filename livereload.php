@@ -22,10 +22,9 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-add_action( 'wp_footer', 'fufi_livereload_snippet' );
-
-function fufi_livereload_snippet() {
-?>
-<script type="text/javascript">document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-<?php
+function enqueue_livereload_js() {
+    wp_enqueue_script('livereload', plugins_url('livereload/livereload.js'), array('jquery'), false, true);
 }
+
+add_action('wp_enqueue_scripts', 'enqueue_livereload_js');
+add_action('admin_enqueue_scripts', 'enqueue_livereload_js');
